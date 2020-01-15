@@ -1,0 +1,63 @@
+body
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #404040;
+}
+.navbar
+{
+    height: 80px;
+    background-color: #dfdfdf !important;
+}
+.offer-icons
+{
+    font-size: 100px;
+    
+    
+}
+.offer-field
+{
+    text-align: center;
+}
+.green-circle
+{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #DFDFDF;
+    padding: 10px;
+
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: inline-flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+.horizontal-line
+{
+    display: inline-block;
+    margin: 50px 0px;
+    border: 1px solid #dfdfdf;
+}
+.carousel-item > img
+{
+    max-height: 430px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+}
+.offer-img
+{
+    max-height: 430px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+}
+.background
+{
+    border-radius: 14px 14px 0px 0px;
+    background-color: #dfdfdf;
+}
