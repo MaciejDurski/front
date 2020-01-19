@@ -1,11 +1,13 @@
-body
+html,body
 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #404040;
+    height: 100%;
+    width: 100%;
 }
 .navbar
 {
-    height: 80px;
+    height: 65px;
     background-color: #dfdfdf !important;
 }
 .offer-icons
@@ -39,7 +41,7 @@ body
 .horizontal-line
 {
     display: inline-block;
-    margin: 50px 0px;
+    
     border: 1px solid #dfdfdf;
 }
 .carousel-item > img
@@ -55,9 +57,151 @@ body
     object-fit: cover;
     object-position: center;
     border-radius: 14px;
+    filter: invert(40%) sepia(93%) saturate(1239%) hue-rotate(83deg) brightness(95%) contrast(102%) opacity(0.95);
+    
 }
 .background
 {
     border-radius: 14px 14px 0px 0px;
     background-color: #dfdfdf;
 }
+.contact-header
+{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.contact-list
+{
+    list-style: none;
+    padding-left: 10px;
+}
+
+.carousel-item-next .carousel-caption {
+    opacity: 0.1;
+}
+.carousel-item-prev .carousel-caption{
+    opacity: 0.1;
+}
+.carousel-caption
+{
+    right: 0;
+    left: auto;
+    text-align: left;
+    top: 30%;
+    transform: translateY(-30%);
+    height: 200px;
+    width: 380px;
+    background-color: #0EAA00;
+    opacity: .95;
+    border-radius: 14px 0px 0px 14px;
+    transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    -webkit-transition: opacity .4s ease-in-out;
+
+}
+.caption-field
+{
+    padding: 5px;
+    margin-left: 5px;
+}
+.carousel-caption p
+{
+    color: #f9f9f9;
+}
+.upper-caption
+{
+    
+    font-size: 30px;
+    margin-bottom: 8px;
+    font-weight: 600;
+
+}
+.description-caption
+{
+    font-size: 17px;
+    line-height: 18px;
+    
+}
+.caption-btn
+{
+    background-color: #f9f9f9;
+    border: none;
+    color: #404040;
+    text-align: center;
+    text-decoration: none;
+    width: 90px;
+    height: 30px;
+    bottom: 12%;
+    position: absolute;
+    padding: 0px;
+    
+}
+.carousel-indicators li
+{
+    height: 22px;
+    width: 22px;
+    border-radius: 40% !important;
+    margin: 8px;
+    background-color: #f9f9f9;
+}
+.nav-item
+{
+    font-size: 17px; 
+
+}
+.nav-item  i
+{
+    margin-right: 10px;
+}
+
+.navbar li a:hover
+{
+    opacity: .5;
+}
+
+
+
+.navbar-light .navbar-nav .nav-link
+{
+    color: #404040;
+}
+
+.name
+{
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0px;
+    line-height: 20px;
+}
+.d-name
+{
+    font-size: 13px;
+    margin: 0px;
+    line-height: 19px;
+    margin-left: 2px;
+}
+
+.logo-icon
+{
+    position: absolute;
+    height: 52px;
+    width: 60px;
+    right: 0;
+    bottom: 0;
+    
+}
+.logo
+{
+    position: relative;
+    width: 165px;
+    height: 50px;
+}
+.logo-text
+{
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    
+}
+
+
