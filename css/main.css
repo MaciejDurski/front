@@ -1,6 +1,6 @@
 html,body
 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Lato', sans-serif;
     color: #404040;
     height: 100%;
     width: 100%;
@@ -91,7 +91,7 @@ html,body
     transform: translateY(-30%);
     height: 200px;
     width: 380px;
-    background-color: #0EAA00;
+    background-color: #2FAD55;
     opacity: .95;
     border-radius: 14px 0px 0px 14px;
     transition: opacity .4s ease-in-out;
