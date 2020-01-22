@@ -10,15 +10,27 @@ html,body
     height: 65px;
     background-color: #dfdfdf !important;
 }
+
+.offer-svg
+{
+    height: 90px;
+    width: 90px;
+    fill: #404040;
+}
 .offer-icons
 {
-    font-size: 90px;
-    
-    
+    display: none !important;
+    font-size: 70px;    
+}
+.offer-label
+{
+    font-size: 22px;
+    line-height: 21px;
 }
 .offer-field
 {
     text-align: center;
+    
 }
 .green-circle
 {
@@ -27,6 +39,7 @@ html,body
     border-radius: 50%;
     background-color: #DFDFDF;
     padding: 10px;
+    opacity: .8;
 
     display: -webkit-flexbox;
     display: -ms-flexbox;
@@ -50,16 +63,9 @@ html,body
     object-fit: cover;
     object-position: center;
     border-radius: 14px;
+   
 }
-.offer-img
-{
-    max-height: 430px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 14px;
-    filter: invert(49%) sepia(94%) saturate(379%) hue-rotate(86deg) brightness(95%) contrast(82%) opacity(.79);
-    
-}
+
 .background
 {
     border-radius: 14px 14px 0px 0px;
@@ -89,8 +95,8 @@ html,body
     text-align: left;
     top: 30%;
     transform: translateY(-30%);
-    height: 200px;
-    width: 380px;
+    height: 210px;
+    width: 390px;
     background-color: #2FAD55;
     opacity: .95;
     border-radius: 14px 0px 0px 14px;
@@ -111,14 +117,14 @@ html,body
 .upper-caption
 {
     
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 8px;
     font-weight: 600;
 
 }
 .description-caption
 {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 18px;
     
 }
@@ -129,12 +135,18 @@ html,body
     color: #404040;
     text-align: center;
     text-decoration: none;
-    width: 90px;
-    height: 30px;
+    width: 95px;
+    height: 32px;
     bottom: 12%;
     position: absolute;
     padding: 0px;
     
+    
+}
+.caption-btn:hover
+{
+    background-color: #dfdfdf;
+    color: #2FAD55;
 }
 .carousel-indicators li
 {
@@ -206,7 +218,7 @@ html,body
 .offer-name
 {
    
-    height: 70px;
+    height: 72px;
  
 }
 .offer-link
@@ -223,4 +235,59 @@ html,body
 {
 	background-color:#2FAD55;
 	opacity: .8;
+}
+.offer-img
+{
+    max-height: 430px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px; 
+    z-index: 1;
+   filter: invert(42%) sepia(94%) 
+   saturate(379%) hue-rotate(86deg) brightness(90%) contrast(82%) opacity(85%);
+    
+}
+.text
+{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+.parallax
+{
+    position: relative;
+}
+
+.about-number
+{
+   color: #f9f9f9;
+   font-size: 58px;
+   margin: 0px;
+  
+  
+}
+.about-text
+{
+    color: #f9f9f9;
+    font-size: 28px;
+    line-height: 26px;
+   
+}
+
+.about-row
+{
+    width: 70%!important;
+    margin-right: 0px!important;
+    left: 50px;
+}
+
+@media(max-width:768px)
+{
+    .background
+    {
+        text-align: center!important;
+    }
 }
