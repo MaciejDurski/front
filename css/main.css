@@ -299,8 +299,14 @@ html,body
    background-repeat: no-repeat;
    background-size: cover;
 }
-
-
+.circle-row
+{
+    margin: 22px 0px;
+}
+.circle-header
+{
+    margin: 18px 0px;
+}
 
 
 @media(max-width:768px)
