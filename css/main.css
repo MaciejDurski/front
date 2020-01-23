@@ -4,6 +4,7 @@ html,body
     color: #404040;
     height: 100%;
     width: 100%;
+    background-color: #f9f9f9;
 }
 .navbar
 {
@@ -32,12 +33,23 @@ html,body
     text-align: center;
     
 }
+.offer-link:hover
+{
+	color:#404040;
+	text-decoration:none;
+}
+.offer-link:hover .green-circle
+{
+	background-color:#2FAD55;
+	opacity: .85;
+}
+
 .green-circle
 {
     width: 170px;
     height: 170px;
     border-radius: 50%;
-    background-color: #DFDFDF;
+    background-color: #dfdfdf;
     padding: 10px;
     opacity: .8;
 
@@ -119,7 +131,8 @@ html,body
     
     font-size: 32px;
     margin-bottom: 8px;
-    font-weight: 600;
+    
+
 
 }
 .description-caption
@@ -226,15 +239,51 @@ html,body
 	color: #404040;
 	text-decoration: none;
 }
-.offer-link:hover
+
+
+.text
 {
-	color:#404040;
-	text-decoration:none;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    
 }
-.offer-link:hover .green-circle
+
+
+
+.about-number
 {
-	background-color:#2FAD55;
-	opacity: .8;
+   color: #dfdfdf;
+   font-size: 58px;
+   margin: 0px;
+ 
+  
+}
+.about-text
+{
+    color: #dfdfdf;
+    font-size: 28px;
+    line-height: 26px;
+
+}
+
+.about-row
+{
+    width: 75%;
+    margin: 0px auto;
+    
+    left: 50px;
+}
+.simpleParallax
+{
+    border-radius: 14px!important;
+}
+.parallax
+{
+    position: relative;
+    
 }
 .offer-img
 {
@@ -243,46 +292,16 @@ html,body
     object-position: center;
     border-radius: 14px; 
     z-index: 1;
-   filter: invert(42%) sepia(94%) 
+   filter: invert(40%) sepia(94%) 
    saturate(379%) hue-rotate(86deg) brightness(90%) contrast(82%) opacity(85%);
-    
-}
-.text
-{
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);  
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 
-.parallax
-{
-    position: relative;
-}
 
-.about-number
-{
-   color: #f9f9f9;
-   font-size: 58px;
-   margin: 0px;
-  
-  
-}
-.about-text
-{
-    color: #f9f9f9;
-    font-size: 28px;
-    line-height: 26px;
-   
-}
 
-.about-row
-{
-    width: 70%!important;
-    margin-right: 0px!important;
-    left: 50px;
-}
 
 @media(max-width:768px)
 {
