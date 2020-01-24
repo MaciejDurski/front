@@ -1,15 +1,24 @@
 html,body
 {
+    scroll-behavior: smooth;
     font-family: 'Lato', sans-serif;
     color: #404040;
     height: 100%;
     width: 100%;
     background-color: #f9f9f9;
 }
+.container-fluid
+{
+    padding: 0px;
+}
 .navbar
 {
-    height: 65px;
-    background-color: #dfdfdf !important;
+    position: absolute;
+    width: 100%;
+    z-index: 200;
+    height: 95px;
+    opacity: .8;
+    background:rgba(223, 223, 223, 0.5)!important;
 }
 
 .offer-svg
@@ -71,16 +80,16 @@ html,body
 }
 .carousel-item > img
 {
-    max-height: 430px;
+    height: 100vh;
     object-fit: cover;
     object-position: center;
-    border-radius: 14px;
-   
+ 
 }
+
 
 .background
 {
-    border-radius: 14px 14px 0px 0px;
+   
     background-color: #dfdfdf;
 }
 .contact-header
@@ -100,58 +109,57 @@ html,body
 .carousel-item-prev .carousel-caption{
     opacity: 0.1;
 }
+
 .carousel-caption
 {
-    right: 0;
-    left: auto;
-    text-align: left;
-    top: 30%;
-    transform: translateY(-30%);
-    height: 210px;
-    width: 390px;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    height: 300px;
+    width:100%;
+    
+  
     background-color: #2FAD55;
-    opacity: .95;
-    border-radius: 14px 0px 0px 14px;
+    opacity: .8;
+        
     transition: opacity .4s ease-in-out;
     -moz-transition: opacity .4s ease-in-out;
     -webkit-transition: opacity .4s ease-in-out;
 
 }
-.caption-field
-{
-    padding: 5px;
-    margin-left: 5px;
-}
+
 .carousel-caption p
 {
-    color: #f9f9f9;
+    color: #404040;
 }
 .upper-caption
 {
     
-    font-size: 32px;
-    margin-bottom: 8px;
-    
+    font-size: 55px;
+    margin: 13px 0px;
+    line-height: 50px;
+    padding-top: 8px;
 
 
 }
 .description-caption
 {
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 24px;
+    line-height: 22px;
+    padding-top: 4px;
+    margin-bottom: 30px;
     
 }
 .caption-btn
 {
-    background-color: #f9f9f9;
-    border: none;
+    background-color: transparent;
+    border: 1px solid #dfdfdf;
     color: #404040;
     text-align: center;
     text-decoration: none;
     width: 95px;
     height: 32px;
-    bottom: 12%;
-    position: absolute;
+   
     padding: 0px;
     
     
@@ -159,6 +167,7 @@ html,body
 .caption-btn:hover
 {
     background-color: #dfdfdf;
+    font-weight: 700;
     color: #2FAD55;
 }
 .carousel-indicators li
@@ -167,11 +176,15 @@ html,body
     width: 22px;
     border-radius: 40% !important;
     margin: 8px;
-    background-color: #f9f9f9;
+    background-color: #dfdfdf;
+}
+.carousel-indicators li:hover
+{
+    opacity: 1;
 }
 .nav-item
 {
-    font-size: 17px; 
+    font-size: 18px; 
 
 }
 .nav-item  i
@@ -193,33 +206,34 @@ html,body
 
 .name
 {
-    font-size: 32px;
+    font-size: 39px;
     font-weight: 500;
     margin: 0px;
     line-height: 20px;
 }
 .d-name
 {
-    font-size: 13px;
+    font-size: 15px;
     margin: 0px;
-    line-height: 19px;
+    margin-top: 2px;
+    line-height: 18px;
     margin-left: 2px;
 }
 
 .logo-icon
 {
     position: absolute;
-    height: 52px;
-    width: 60px;
+    height: 57px;
+    width: 65px;
     right: 0;
-    bottom: 0;
+    bottom: -3px;
     
 }
 .logo
 {
     position: relative;
-    width: 165px;
-    height: 50px;
+    width: 170px;
+    height: 55px;
 }
 .logo-text
 {
@@ -269,17 +283,8 @@ html,body
 
 }
 
-.about-row
-{
-    width: 75%;
-    margin: 0px auto;
-    
-    left: 50px;
-}
-.simpleParallax
-{
-    border-radius: 14px!important;
-}
+
+
 .parallax
 {
     position: relative;
@@ -290,7 +295,7 @@ html,body
     max-height: 430px;
     object-fit: cover;
     object-position: center;
-    border-radius: 14px; 
+ 
     z-index: 1;
    filter: invert(40%) sepia(94%) 
    saturate(379%) hue-rotate(86deg) brightness(90%) contrast(82%) opacity(85%);
@@ -299,13 +304,53 @@ html,body
    background-repeat: no-repeat;
    background-size: cover;
 }
-.circle-row
+.row-margin
 {
-    margin: 22px 0px;
+    margin: 30px 0px;
 }
 .circle-header
 {
-    margin: 18px 0px;
+    padding: 22px 0px;
+    margin: 0px;
+}
+#staticBtn
+{
+    position: fixed;
+    bottom: 80px;
+    left: 60px;
+    z-index: 99;
+    border: 1px solid #dfdfdf;
+    outline: none;
+    background-color: transparent;
+    color: #404040;
+    cursor: pointer;
+    padding:10px;
+    border-radius: 50%;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    
+}
+#staticBtn:hover
+{
+    background-color: #dfdfdf;
+    
+}
+
+#staticBtn:hover .arrow-down
+{
+    
+    filter: invert(52%) sepia(59%) saturate(506%) 
+    hue-rotate(86deg) brightness(94%) contrast(92%);
+}
+
+
+.arrow-down
+{
+    filter: opacity(65%);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
 }
 
 
