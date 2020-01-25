@@ -115,7 +115,7 @@ html,body
     left: 0;
     bottom: 0;
     text-align: center;
-    height: 300px;
+    height: 38vh;
     width:100%;
     
   
@@ -135,21 +135,22 @@ html,body
 .upper-caption
 {
     
-    font-size: 55px;
-    margin: 13px 0px;
+    font-size: 50px;
+    margin: 10px 0px;
     line-height: 50px;
-    padding-top: 8px;
+    
 
 
 }
 .description-caption
 {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 22px;
     padding-top: 4px;
-    margin-bottom: 30px;
+    
     
 }
+
 .caption-btn
 {
     background-color: transparent;
@@ -359,5 +360,18 @@ html,body
     .background
     {
         text-align: center!important;
+    }
+    #staticBtn
+    {
+        display: none!important;
+    }
+    .upper-caption
+    {
+        font-size: 40px;
+        margin: 5px 0px;
+    }
+    .description-caption
+    {
+        font-size: 20px;
     }
 }
