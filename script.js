@@ -40,5 +40,3 @@ new simpleParallax(image,
 
 
   
-
-  

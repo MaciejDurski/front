@@ -2,10 +2,31 @@ html,body
 {
     scroll-behavior: smooth;
     font-family: 'Lato', sans-serif;
-    color: #404040;
-    height: 100%;
+
+    /*ten kolor odpowiada za kolor czcionki*/
+
+    --font-color:#333333;
+
+    color: var(--font-color);
+    
     width: 100%;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9 !important;
+
+    /*ten kolor można zmieniać zmieni się wtedy akcent (zielony)
+    nie zmienia się tylko kolor filtra zdjęcia bo to więcej roboty*/
+    --green1:#0CA83B;
+    /*
+    --green1:#16A842;
+    --green1:#07A305;
+    --green1:#0CA83B;
+    --green1:#0A941F;
+
+
+    ten kolor był poprzednio
+    --green1:#2FAD55;
+    */
+    
+    
 }
 .container-fluid
 {
@@ -25,7 +46,7 @@ html,body
 {
     height: 90px;
     width: 90px;
-    fill: #404040;
+    fill: var(--font-color);
 }
 .offer-icons
 {
@@ -34,8 +55,9 @@ html,body
 }
 .offer-label
 {
-    font-size: 22px;
-    line-height: 21px;
+    font-size: 21px;
+    line-height: 23px;
+    margin: 0px;
 }
 .offer-field
 {
@@ -44,13 +66,13 @@ html,body
 }
 .offer-link:hover
 {
-	color:#404040;
+	color:var(--font-color);
 	text-decoration:none;
 }
 .offer-link:hover .green-circle
 {
-	background-color:#2FAD55;
-	opacity: .85;
+	background-color:var(--green1);
+	opacity: .95;
 }
 
 .green-circle
@@ -85,11 +107,34 @@ html,body
     object-position: center;
  
 }
+#footer
+{
+    position: fixed;
+    z-index: -3;
+    
+    bottom: 0;
+    width: 100%;
 
+}
+
+body
+{
+
+    z-index: 2;
+    margin-bottom: 45vh;
+}
+
+.arrow-down
+{
+    filter: opacity(65%);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
 
 .background
 {
-   
+    min-height: 45vh;
     background-color: #dfdfdf;
 }
 .contact-header
@@ -110,7 +155,8 @@ html,body
     opacity: 0.1;
 }
 
-.carousel-caption
+
+.caption-mod
 {
     left: 0;
     bottom: 0;
@@ -119,18 +165,30 @@ html,body
     width:100%;
     
   
-    background-color: #2FAD55;
+    background-color: var(--green1);
     opacity: .9;
         
     transition: opacity .4s ease-in-out;
     -moz-transition: opacity .4s ease-in-out;
     -webkit-transition: opacity .4s ease-in-out;
+}
 
+.offer-caption
+{
+    
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  
+
+    
 }
 
 .carousel-caption p
 {
-    color: #404040;
+    color: var(--font-color);
 }
 .upper-caption
 {
@@ -155,7 +213,7 @@ html,body
 {
     background-color: transparent;
     border: 1px solid #dfdfdf;
-    color: #404040;
+    color: var(--font-color);
     text-align: center;
     text-decoration: none;
     width: 95px;
@@ -169,7 +227,7 @@ html,body
 {
     background-color: #dfdfdf;
     font-weight: 700;
-    color: #2FAD55;
+    color: var(--green1);
 }
 .carousel-indicators li
 {
@@ -202,7 +260,7 @@ html,body
 
 .navbar-light .navbar-nav .nav-link
 {
-    color: #404040;
+    color: var(--font-color);
 }
 
 .name
@@ -243,7 +301,7 @@ html,body
     left: 0;
     
 }
-.offer-name
+.label-height
 {
    
     height: 72px;
@@ -251,7 +309,7 @@ html,body
 }
 .offer-link
 {
-	color: #404040;
+	color: var(--font-color);
 	text-decoration: none;
 }
 
@@ -266,7 +324,14 @@ html,body
     
 }
 
-
+.about-head
+{
+    position: absolute;
+    font-size: 2.5rem;
+    color: #dfdfdf;
+    top: 10%;
+    transform: translateY(-10%);
+}
 
 .about-number
 {
@@ -293,7 +358,7 @@ html,body
 }
 .offer-img
 {
-    max-height: 430px;
+    max-height: 50vh;
     object-fit: cover;
     object-position: center;
  
@@ -323,7 +388,7 @@ html,body
     border: 1px solid #dfdfdf;
     outline: none;
     background-color: transparent;
-    color: #404040;
+    color: var(--font-color);
     cursor: pointer;
     padding:10px;
     border-radius: 50%;
@@ -344,22 +409,82 @@ html,body
     filter: invert(52%) sepia(59%) saturate(506%) 
     hue-rotate(86deg) brightness(94%) contrast(92%);
 }
-
-
-.arrow-down
+#carousell-offer
 {
-    filter: opacity(65%);
-    width: 20px;
-    height: 20px;
-    display: inline-block;
+    
+    position: absolute;
+    top:0;
+    height: 100%;
+   
+    width: 100%;
+    display: none;
+    
+}
+.center-vertical
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  
+    width: 100%;
+}
+.logo-svg
+{
+    height: 60px;
+    width: auto;
+    
+  
+    
 }
 
+.carousel-item
+{
+    min-height: 200px;
+}
 
 @media(max-width:768px)
 {
+    .logo-svg
+    {
+        margin-left: 20px;
+    }
+    .about-text
+    {
+        font-size: 24px;
+    }
+    .about-head
+    {
+        font-size: 29px;
+    }
+    .about-number
+    {
+        line-height: 45px;
+        font-size: 39px;
+    }
+    .text
+    {
+        display: none;
+    }
+    #carousell-offer
+    {
+        display: inline-block;
+        
+    }
+
+    body
+    {
+        margin-bottom: 0;
+    }
+    #footer
+    {
+        position: relative;
+        z-index: 2;
+    }
     .background
     {
         text-align: center!important;
+        
     }
     #staticBtn
     {
