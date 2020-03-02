@@ -14,12 +14,12 @@ html,body
 
     /*ten kolor można zmieniać zmieni się wtedy akcent (zielony)
     nie zmienia się tylko kolor filtra zdjęcia bo to więcej roboty*/
-    --green1:#0CA83B;
+    --green1:rgb(4, 122, 40);
     /*
-    --green1:#16A842;
-    --green1:#07A305;
+    
+    
     --green1:#0CA83B;
-    --green1:#0A941F;
+   
 
 
     ten kolor był poprzednio
@@ -139,6 +139,7 @@ body
 }
 .contact-header
 {
+    min-width: 194px;
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -186,6 +187,14 @@ body
     
 }
 
+.caption-field
+{
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-60%);
+}
 .carousel-caption p
 {
     color: var(--font-color);
@@ -441,6 +450,10 @@ body
 .carousel-item
 {
     min-height: 200px;
+}
+@media(min-width:1200px)
+{
+
 }
 
 @media(max-width:768px)

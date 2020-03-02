@@ -24,13 +24,14 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand p-0" href="#">
-                    <div class="logo">
-                        <div class="logo-text">
-                            <p class="name">DINO</p>
-                            <p class="d-name">biuro rachunkowe</p>
-                        </div>
-                        <img class="logo-icon " src="images/dino.svg">
+                    <!--<div class="logo">
+                    <div class="logo-text">
+                        <p class="name">DINO</p>
+                        <p class="d-name">biuro rachunkowe</p>
                     </div>
+                    <img class="logo-icon " src="{{url_for('static',filename='dino.svg')}}">
+                </div>-->
+                <img src="images/vectorpaint.svg" class="logo-svg"><br>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,16 +39,16 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#"><i class="fas fa-home"></i>Start</a>
+                            <a class="nav-link" href=""><i class="fas fa-home"></i>Start</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-user"></i>Oferta</a>
+                            <a class="nav-link" href="#offer"><i class="fas fa-user"></i>Oferta</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-building"></i>Firma</a>
+                            <a class="nav-link" href="#about"><i class="fas fa-building"></i>Firma</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-address-book"></i>Kontakt</a>
+                            <a class="nav-link" href="#contact"><i class="fas fa-address-book"></i>Kontakt</a>
                         </li>
                     </ul>
                 </div>
@@ -57,7 +58,7 @@
     <section id="slider">
         <div class="container-fluid ">
             <!-- trzeba usunąc data-interval żeby wrócił slider automatyczny data-interval="false"-->
-            <div id="carousell" class="carousel slide carousel-fade"  data-ride="carousel">
+            <div id="carousell" class="carousel slide carousel-fade" data-interval="false"  data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carousell" data-slide-to="0" class="active"></li>
                     <li data-target="#carousell" data-slide-to="1"></li>
@@ -344,6 +345,12 @@
                     </div>   
                 </div>
             </div>
+            <div class="text-center">
+                <hr  class="horizontal-line  w-50">
+            </div>
+            <p>Godziny otwarcia:
+                Poniedziałek-piątek: 8:00 - 16:00<br>
+                Inne terminy do uzgodnienia</p>
             
         </div>
     </section>
@@ -359,9 +366,9 @@
    
     <section id="footer">
         <div class="container-fluid ">
-            <div class="background   p-4 ">
+            <div class="background   ">
                 <div class="container">
-                    <div class="row pt-4 pl-3 pr-3">
+                    <div class="row pt-4 ">
                         <div class="col-lg-4 col-md-6 col-xs-12  text-center ">
                             
                                 
