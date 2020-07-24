@@ -1,370 +1,648 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
 
     <title>Dino - biuro rachunkowe</title>
   </head>
+
   <body>
     <section id="nav">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand p-0" href="#">
-                    <div class="logo">
-                        <div class="logo-text">
-                            <p class="name">DINO</p>
-                            <p class="d-name">biuro rachunkowe</p>
-                            <!--Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
-                        </div>
-                        <img class="logo-icon " src="images/dino.svg">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand p-0" href="#">
+            <!--<div class="logo">
+                    <div class="logo-text">
+                        <p class="name">DINO</p>
+                        <p class="d-name">biuro rachunkowe</p>
                     </div>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#"><i class="fas fa-home"></i>Start</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-user"></i>Oferta</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-building"></i>Firma</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-address-book"></i>Kontakt</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                    <img class="logo-icon " src="{{url_for('static',filename='dino.svg')}}">
+                </div>-->
+            <img src="images/vectorpaint.svg" class="logo-svg" /><br />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-controls="navbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href=""><i class="fas fa-home"></i>Start</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#offer"
+                  ><i class="fas fa-user"></i>Oferta</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about"
+                  ><i class="fas fa-building"></i>Firma</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact"
+                  ><i class="fas fa-address-book"></i>Kontakt</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </section>
     <section id="slider">
-        <div class="container">
-            <!-- trzeba usunąc data-interval żeby wrócił slider automatyczny data-interval="false"-->
-            <div id="carousell" class="carousel slide carousel-fade mt-4"  data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carousell" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousell" data-slide-to="1"></li>
-                    <li data-target="#carousell" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class=" d-block w-100" src="images/caro0.jpg" alt="First slide">
-                        <div class="carousel-caption p-3">
-                            <div class="caption-field">
-                                <p class="upper-caption">Pełna księgowość</p>
-                                <p class="description-caption font-weight-light">Sprawdź finanową sytuację swojego przedsiębiorstwa!</p>
-                                <button class="btn caption-btn align-bottom">Więcej</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="images/offer-img.jpg" alt="Second slide">
-                        <div class="carousel-caption p-3">
-                            <div class="caption-field">
-                                <p class="upper-caption">Pełna księgowość</p>
-                                <p class="description-caption">Sprawdź finanową sytuację swojego przedsiębiorstwa</p>
-                                <button class="btn caption-btn align-bottom">Więcej</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class=" d-block w-100" src="images/caro0.jpg" alt="Third slide">
-                        <div class="carousel-caption p-3">
-                            <div class="caption-field">
-                                <p class="upper-caption">Pełna księgowość</p>
-                                <p class="description-caption">Sprawdź finanową sytuację swojego przedsiębiorstwa</p>
-                                <button class="btn caption-btn align-bottom">Więcej</button>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container-fluid">
+        <!-- trzeba usunąc data-interval żeby wrócił slider automatyczny data-interval="false"-->
+        <div
+          id="carousell"
+          class="carousel slide carousel-fade"
+          data-interval="false"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li data-target="#carousell" data-slide-to="0" class="active"></li>
+            <li data-target="#carousell" data-slide-to="1"></li>
+            <li data-target="#carousell" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="d-block w-100"
+                src="images/caro0.jpg"
+                alt="First slide"
+              />
+              <div class="carousel-caption caption-mod p-3">
+                <div class="caption-field">
+                  <p class="upper-caption">Pełna księgowość</p>
+                  <p class="description-caption">
+                    Sprawdź finanową sytuację swojego<br />
+                    przedsiębiorstwa!
+                  </p>
+                  <button class="btn caption-btn">Więcej</button>
                 </div>
-
+              </div>
             </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="images/offer-img.jpg"
+                alt="Second slide"
+              />
+              <div class="carousel-caption caption-mod p-3">
+                <div class="caption-field">
+                  <p class="upper-caption">Pełna księgowość</p>
+                  <p class="description-caption">
+                    Sprawdź finanową sytuację swojego<br />
+                    przedsiębiorstwa
+                  </p>
+                  <button class="btn caption-btn">Więcej</button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="images/caro0.jpg"
+                alt="Third slide"
+              />
+              <div class="carousel-caption caption-mod p-3">
+                <div class="caption-field">
+                  <p class="upper-caption">Pełna księgowość</p>
+                  <p class="description-caption">
+                    Sprawdź finanową sytuację swojego<br />
+                    przedsiębiorstwa
+                  </p>
+                  <button class="btn caption-btn">Więcej</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
+      </div>
     </section>
     <section id="offer">
-        <div class="container  text-center">
-            
-                <h3 class="circle-header">Oferta</h4>
-            <div class="text-center">
-                <hr  class="horizontal-line  w-50">
-            </div>
-                <div class="row circle-row">
-                    <div class="col-lg-3 col-md-6 col-xs-12">
-						<a href="#" class="offer-link">
-							<div class="offer-field">
-								<div class="green-circle ">
-                                    <i class="fas fa-chart-line offer-icons"></i>
-									<img src="images/income.svg" alt="Icons made by srip" class="offer-svg" >
-								</div>
-								<div class="d-flex align-items-center justify-content-center label-height ">
-									<h5 class="offer-label">Księgi przychodów i<br>rozchodów</h5>
-								</div>
-							</div>
-						</a>       
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-xs-12">
-						<a href="#" class="offer-link">
-							<div class="offer-field">
-								<div class="green-circle ">
-									<i class="fas fa-comments-dollar offer-icons"></i>
-                                    <img src="images/talk.svg" alt="Icons made by dDara" class="offer-svg" >
-                                </div>
-								<div class="d-flex align-items-center justify-content-center label-height">
-									<h5 class="offer-label">Księgi handlowe</h5>
-								</div>
-								
-							</div> 
-						</a>	
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-xs-12">
-						<a href="#" class="offer-link">
-							<div class="offer-field">
-								<div class="green-circle ">
-                                    <i class="fas fa-coins offer-icons"></i>
-                                    <img src="images/coins.svg" alt="Icons made by smashicons" class="offer-svg" >
-								</div>
-								<div class="d-flex align-items-center justify-content-center label-height">
-									<h5 class="offer-label">Ryczałt</h5>
-								</div>
-								
-							</div> 
-						</a>        
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-xs-12">
-						<a href="#" class="offer-link">
-							<div class="offer-field">
-								<div class="green-circle ">
-                                    <i class="fas fa-file-invoice-dollar offer-icons"></i>
-                                    <img src="images/money.svg" alt="Icons made by srip" class="offer-svg" >
-								</div>
-								<div class="d-flex align-items-center justify-content-center label-height">
-									<h5 class="offer-label">Pełna księgowość</h5>
-								</div>
-								
-							</div> 
-						</a>        
-                    </div>
-                
-                
-                    <div class="col-lg-3 col-md-6 col-xs-12">
-						<a href="#" class="offer-link">
-							<div class="offer-field">
-								<div class="green-circle ">
-                                    <i class="fas fa-file-medical-alt offer-icons"></i>
-                                    <img src="images/health.svg" alt="Icons made by freepik" class="offer-svg" >
-								</div>
-								<div class="d-flex align-items-center justify-content-center label-height">
-									<h5 class="offer-label">Rozliczenia ZUS</h5>
-								</div>
-								
-							</div> 
-						</a>        
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-xs-12">
-						<a href="#" class="offer-link">
-							<div class="offer-field">
-								<div class="green-circle ">
-                                    <i class="fas fa-users offer-icons"></i>
-                                    <img src="images/user.svg" alt="Icons made by freepik" class="offer-svg" >
-								</div>
-
-								<div class="d-flex align-items-center justify-content-center label-height">
-									<h5 class="offer-label">Rozliczenia kadrowo-<br>płacowe</h5>
-								</div>
-								
-							</div> 
-						</a>   
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-xs-12">
-						<a href="#" class="offer-link">
-							<div class="offer-field">
-								<div class="green-circle ">
-                                    <i class="fas fa-percent offer-icons"></i>
-                                    <img src="images/tax.svg" alt="Icons made by freepik" class="offer-svg" >
-								</div>
-								<div class="d-flex align-items-center justify-content-center label-height">
-									<h5 class="offer-label">Doradztwo podatkowe</h5>
-								</div>
-								
-							</div> 
-						</a>        
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-xs-12">
-						<a href="#" class="offer-link">
-							<div class="offer-field">
-								<div class="green-circle ">
-                                    <i class="fas fa-cart-arrow-down offer-icons"></i>
-                                    <img src="images/building.svg" alt="Icons made by srip" class="offer-svg" >
-								</div>
-								<div class="d-flex align-items-center justify-content-center label-height">
-									<h5 class="offer-label">Ewidencja VAT</h5>
-								</div>
-							</div> 
-                         </a>   
-                    </div>
-                </div>
-                <div class="text-center">
-                    <hr  class="horizontal-line  w-50">
-                </div>
-            
+      <div class="container text-center">
+        <h3 class="circle-header">Oferta</h3>
+        <div class="text-center">
+          <hr class="horizontal-line w-50" />
         </div>
+        <div class="row row-margin">
+          <div
+            class="col-lg-3 col-md-6 col-xs-12"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <a href="#" class="offer-link">
+              <div class="offer-field">
+                <div class="green-circle">
+                  <i class="fas fa-chart-line offer-icons"></i>
+                  <img
+                    src="images/income.svg"
+                    alt="Icons made by srip"
+                    class="offer-svg"
+                  />
+                </div>
+
+                <div
+                  class="d-flex align-items-center justify-content-center label-height"
+                >
+                  <h5 class="offer-label">
+                    Księgi przychodów i<br />rozchodów
+                  </h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 col-xs-12"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <a href="#" class="offer-link">
+              <div class="offer-field">
+                <div class="green-circle">
+                  <i class="fas fa-comments-dollar offer-icons"></i>
+                  <img
+                    src="images/talk.svg"
+                    alt="Icons made by dDara"
+                    class="offer-svg"
+                  />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-center label-height"
+                >
+                  <h5 class="offer-label">Księgi handlowe</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 col-xs-12"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <a href="#" class="offer-link">
+              <div class="offer-field">
+                <div class="green-circle">
+                  <i class="fas fa-coins offer-icons"></i>
+                  <img
+                    src="images/coins.svg"
+                    alt="Icons made by smashicons"
+                    class="offer-svg"
+                  />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-center label-height"
+                >
+                  <h5 class="offer-label">Ryczałt</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 col-xs-12"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <a href="#" class="offer-link">
+              <div class="offer-field">
+                <div class="green-circle">
+                  <i class="fas fa-file-invoice-dollar offer-icons"></i>
+                  <img
+                    src="images/money.svg"
+                    alt="Icons made by srip"
+                    class="offer-svg"
+                  />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-center label-height"
+                >
+                  <h5 class="offer-label">Pełna księgowość</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-6 col-xs-12"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <a href="#" class="offer-link">
+              <div class="offer-field">
+                <div class="green-circle">
+                  <i class="fas fa-file-medical-alt offer-icons"></i>
+                  <img
+                    src="images/health.svg"
+                    alt="Icons made by freepik"
+                    class="offer-svg"
+                  />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-center label-height"
+                >
+                  <h5 class="offer-label">Rozliczenia ZUS</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 col-xs-12"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <a href="#" class="offer-link">
+              <div class="offer-field">
+                <div class="green-circle">
+                  <i class="fas fa-users offer-icons"></i>
+                  <img
+                    src="images/user.svg"
+                    alt="Icons made by freepik"
+                    class="offer-svg"
+                  />
+                </div>
+
+                <div
+                  class="d-flex align-items-center justify-content-center label-height"
+                >
+                  <h5 class="offer-label">Rozliczenia kadrowo-<br />płacowe</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 col-xs-12"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <a href="#" class="offer-link">
+              <div class="offer-field">
+                <div class="green-circle">
+                  <i class="fas fa-percent offer-icons"></i>
+                  <img
+                    src="images/tax.svg"
+                    alt="Icons made by freepik"
+                    class="offer-svg"
+                  />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-center label-height"
+                >
+                  <h5 class="offer-label">Doradztwo podatkowe</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 col-xs-12"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <a href="#" class="offer-link">
+              <div class="offer-field">
+                <div class="green-circle">
+                  <i class="fas fa-cart-arrow-down offer-icons"></i>
+                  <img
+                    src="images/building.svg"
+                    alt="Icons made by srip"
+                    class="offer-svg"
+                  />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-center label-height"
+                >
+                  <h5 class="offer-label">Ewidencja VAT</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="text-center">
+          <hr class="horizontal-line w-50" />
+        </div>
+      </div>
     </section>
+
     <section id="about">
-        <div class="container-fluid circle-row">
-            <div class="container ">
-                <div class="parallax w-100 mt-4 ">
-                    <img class="offer-img w-100" 
-                        alt="Photo by Helloquence on Unsplash" src="images/offer-img.jpg">
-                    
-                        <div class="text w-100">
-                            <div class="row about-row">
-                                <div class="col-md-4 text-center align-self-center p-md-0">
-                                    <p class="about-number">200+</p>
-                                    <p class="about-text">klientów</p>
-                                </div>
-                                <div class="col-md-4 text-center align-self-center p-md-0">
-                                    <p class="about-number">26+</p>
-                                    <p class="about-text">lat<br>doświadczenia</p>
-                                </div>
-                                <div class="col-md-4 text-center align-self-center p-md-0">
-                                    <p class="about-number">10+</p>
-                                    <p class="about-text">specjalistów</p>   
-                                </div>
-                            </div>
-                        </div>
-                    
+      <div class="container-fluid row-margin">
+        <div class="parallax w-100 mt-4">
+          <img
+            class="offer-img d-block w-100"
+            alt="Photo by Helloquence on Unsplash"
+            src="images/offer-img.jpg"
+          />
+
+          <p class="about-head text-center w-100">Nasza firma to:</p>
+
+          <div id="carousell-offer" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carousell-offer"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#carousell-offer" data-slide-to="1"></li>
+              <li data-target="#carousell-offer" data-slide-to="2"></li>
+            </ol>
+            <div class="center-vertical">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="offer-caption text-center">
+                    <p class="about-number">200+</p>
+                    <p class="about-text">klientów</p>
+                  </div>
                 </div>
+                <div class="carousel-item">
+                  <div class="offer-caption text-center">
+                    <p class="about-number">26+</p>
+                    <p class="about-text">lat<br />doświadczenia</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="offer-caption text-center">
+                    <p class="about-number">10+</p>
+                    <p class="about-text">specjalistów</p>
+                  </div>
+                </div>
+              </div>
             </div>
+            <a
+              class="carousel-control-prev"
+              href="#carousell-offer"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carousell-offer"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <div class="text w-100">
+            <div class="container">
+              <div class="row ml-5 mr-5">
+                <div
+                  class="col-md-4 text-center align-self-center p-md-0"
+                  data-aos="fade-in"
+                  data-aos-duration="1000"
+                >
+                  <p class="about-number">200+</p>
+                  <p class="about-text">klientów</p>
+                </div>
+                <div
+                  class="col-md-4 text-center align-self-center p-md-0"
+                  data-aos="fade-in"
+                  data-aos-duration="1000"
+                >
+                  <p class="about-number">26+</p>
+                  <p class="about-text">lat<br />doświadczenia</p>
+                </div>
+                <div
+                  class="col-md-4 text-center align-self-center p-md-0"
+                  data-aos="fade-in"
+                  data-aos-duration="1000"
+                >
+                  <p class="about-number">10+</p>
+                  <p class="about-text">specjalistów</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
+
     <section id="contact">
-        <div class="container text-center">
-            
-            <h3 class="circle-header">Kontakt</h3>
-            <div class="text-center">
-                <hr  class="horizontal-line  w-50">
-            </div>
-            <div class="row circle-row">
-                <div class="col-md-4">
-                    <a href="#" class="offer-link">
-                        <div class="offer-field">
-                            <div class="green-circle ">
-                                <i class="fas fa-cart-arrow-down offer-icons"></i>
-                                <img src="images/old-typical-phone.svg" alt="Icons made by srip" class="offer-svg" >
-                            </div>
-                            <div class="d-flex align-items-center justify-content-center label-height">
-                                <h5 class="offer-label">+61 86 227 86</h5>
-                                <h5 class="offer-label">502 721 831</h5>
-                            </div>
-                        </div> 
-                     </a>   
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="offer-link">
-                        <div class="offer-field">
-                            <div class="green-circle ">
-                                <i class="fas fa-cart-arrow-down offer-icons"></i>
-                                <img src="images/mail.svg" alt="Icons made by srip" class="offer-svg" >
-                            </div>
-                            <div class="d-flex align-items-center justify-content-center label-height">
-                                <h5 class="offer-label">dino@dino.poznan.pl</h5>
-                            </div>
-                        </div> 
-                     </a>   
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="offer-link">
-                        <div class="offer-field">
-                            <div class="green-circle ">
-                                <i class="fas fa-cart-arrow-down offer-icons"></i>
-                                <img src="images/pin.svg" alt="Icons made by srip" class="offer-svg" >
-                            </div>
-                            <div class="d-flex align-items-center justify-content-center label-height">
-                                <h5 class="offer-label">ul. Dziewińska 74</h5><br>
-                                <h5 class="offer-label">Poznań 60-178</h5>
-                            </div>
-                        </div> 
-                     </a>   
-                </div>
-            </div>
-            
+      <div class="container text-center">
+        <h3 class="circle-header">Kontakt</h3>
+        <div class="text-center">
+          <hr class="horizontal-line w-50" />
         </div>
+        <div class="row row-margin">
+          <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+            <div class="offer-field">
+              <div class="green-circle">
+                <i class="fas fa-cart-arrow-down offer-icons"></i>
+                <img
+                  src="images/old-typical-phone.svg"
+                  alt="Icons made by srip"
+                  class="offer-svg"
+                />
+              </div>
+              <div
+                class="d-flex flex-column align-items-center justify-content-center label-height"
+              >
+                <h5 class="offer-label">+61 86 227 86</h5>
+                <h5 class="offer-label">502 721 831</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+            <div class="offer-field">
+              <div class="green-circle">
+                <i class="fas fa-cart-arrow-down offer-icons"></i>
+                <img
+                  src="images/mail.svg"
+                  alt="Icons made by srip"
+                  class="offer-svg"
+                />
+              </div>
+              <div
+                class="d-flex flex-column align-items-center justify-content-center label-height"
+              >
+                <h5 class="offer-label">dino@dino.poznan.pl</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+            <div class="offer-field">
+              <div class="green-circle">
+                <i class="fas fa-cart-arrow-down offer-icons"></i>
+                <img
+                  src="images/pin.svg"
+                  alt="Icons made by srip"
+                  class="offer-svg"
+                />
+              </div>
+              <div
+                class="d-flex flex-column align-items-center justify-content-center label-height"
+              >
+                <h5 class="offer-label">ul. Dziewińska 74</h5>
+                <h5 class="offer-label">Poznań 60-178</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <hr class="horizontal-line w-50" />
+        </div>
+        <p>
+          Godziny otwarcia: Poniedziałek-piątek: 8:00 - 16:00<br />
+          Inne terminy do uzgodnienia
+        </p>
+      </div>
     </section>
+    <section id="map">
+      <div class="container-fluid pt-4">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="100%"
+              height="500"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=Dziewi%C5%84ska%2074&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe>
+            <a href="https://www.whatismyip-address.com"
+              >whatismyip-address.com</a
+            >
+          </div>
+          <style>
+            .mapouter {
+              position: relative;
+              text-align: right;
+              height: 500px;
+              width: 100%;
+            }
+
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+              height: 500px;
+              width: 100%px;
+            }
+          </style>
+        </div>
+      </div>
+    </section>
+
     <section id="footer">
-        <div class="container">
-            <div class="background w-100 mt-4 p-4 ">
-                <div class="row pt-4 pl-3 pr-3">
-                    <div class="col-lg-4 col-md-6 col-xs-12  text-center">
-                        <div class="d-inline-block text-md-left">
-                            <h7 class="contact-header">Adres firmy</h7>
-                            <ul class="contact-list">
-                                <li class="contact-item">Biuro Rachunkowe DINO</li>
-                                <li class="contact-item">ul. Dziewińska 74</li>
-                                <li class="contact-item">Poznań 60-178</li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 text-center ">
-                        <div class="d-inline-block text-md-left">
-                            <h7 class="contact-header">Kontakt</h7>
-                            <ul class="contact-list">
-                                <li class="contact-item">tel: 61 86 227 86</li>
-                                <li class="contact-item">kom. 502 721 831</li>
-                                <li class="contact-item">email: dino@dino.poznan.pl</li>
-                            </ul>
-                            <h7 class="contact-header">GODZINY OTWARCIA</h7>
-                            <ul class="contact-list">
-                                <li class="contact-item">pon-pt: 8:00-16:00</li>
-                                <li class="contact-item">inne terminy do uzgodnienia</li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12  text-center">
-                        <div class="d-inline-block text-md-left">
-                            <h7 class="contact-header">DANE FIRMY</h7>
-                            <ul class="contact-list">
-                                <li class="contact-item">NIP: 7790045784</li>
-                                <li class="contact-item">REGON: 630182140</li>
-                            </ul>
-                        </div>
-                        
-                    </div>
+      <div class="container-fluid">
+        <div class="background p-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-xs-12 text-center">
+                <div class="d-inline-block text-md-left">
+                  <img
+                    src="images/vectorpaint.svg"
+                    class="logo-svg d-flex align-self-center pb-2"
+                  /><br />
+                  <h7 class="contact-header">Adres firmy</h7>
+                  <ul class="contact-list">
+                    <li class="contact-item">Biuro Rachunkowe DINO</li>
+                    <li class="contact-item">ul. Dziewińska 74</li>
+                    <li class="contact-item">Poznań 60-178</li>
+                  </ul>
                 </div>
+              </div>
+              <div class="col-md-4 col-xs-12 text-center">
+                <div class="d-inline-block text-md-left">
+                  <h7 class="contact-header">Kontakt</h7>
+                  <ul class="contact-list">
+                    <li class="contact-item">tel: 61 86 227 86</li>
+                    <li class="contact-item">kom. 502 721 831</li>
+                    <li class="contact-item">email: dino@dino.poznan.pl</li>
+                  </ul>
+                  <h7 class="contact-header">GODZINY OTWARCIA</h7>
+                  <ul class="contact-list">
+                    <li class="contact-item">pon-pt: 8:00-16:00</li>
+                    <li class="contact-item">inne terminy do uzgodnienia</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4 col-xs-12 text-center">
+                <div class="d-inline-block text-md-left">
+                  <h7 class="contact-header">DANE FIRMY</h7>
+                  <ul class="contact-list">
+                    <li class="contact-item">NIP: 7790045784</li>
+                    <li class="contact-item">REGON: 630182140</li>
+                  </ul>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-   
-
-
+    <button onclick="topFunction()" id="staticBtn">
+      <img class="arrow-down" src="images/download.svg" />
+    </button>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-   
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
     <script src="script.js"></script>
 
-    </body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

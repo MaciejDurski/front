@@ -1,0 +1,45 @@
+.carousel-item > img {
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-item-next .carousel-caption {
+  opacity: 0.1;
+}
+
+.carousel-item-prev .carousel-caption {
+  opacity: 0.1;
+}
+
+.carousel-indicators li {
+  height: 22px;
+  width: 22px;
+  border-radius: 40% !important;
+  margin: 8px;
+  background-color: #dfdfdf;
+}
+
+.carousel-indicators li:hover {
+  opacity: 1;
+}
+
+#carousell-offer {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.carousel-item {
+  min-height: 200px;
+}
+
+#carousell-offer {
+  display: inline-block;
+}
+
+.carousel-caption p {
+  color: #333333;
+}
