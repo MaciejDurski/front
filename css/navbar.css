@@ -4,11 +4,12 @@
   z-index: 200;
   height: 95px;
   opacity: 0.8;
+  /* background-color: transparent !important; */
   background: rgba(223, 223, 223, 0.5) !important;
 }
 
 .nav-item {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .nav-item i {

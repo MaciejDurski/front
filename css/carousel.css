@@ -36,10 +36,16 @@
   min-height: 200px;
 }
 
-#carousell-offer {
+/* #carousell-offer {
   display: inline-block;
-}
+} */
 
 .carousel-caption p {
   color: #333333;
+}
+
+@media (max-width: 768px) {
+  #carousell-offer {
+    display: inline-block;
+  }
 }
