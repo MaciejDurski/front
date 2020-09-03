@@ -1,22 +1,30 @@
 #intro {
   height: 100vh;
 }
-#intro > div {
-  position: absolute;
-  bottom: 5vh;
-  left: 100px;
+.intro-header {
+  display: flex;
+  padding-top: 25vh;
+  position: relative;
+  height: 100vh;
 }
-#intro > div > img {
+
+.intro-header > div {
+  position: relative;
+  display: block;
+}
+.intro-header > div > img {
   width: 230px;
   height: auto;
 }
-#intro > div > p {
+.intro-header > div > p {
   text-align: center;
+  max-width: 230px;
   font-size: 22px;
   line-height: 22px;
   margin-top: 5px;
+  color: #f9f9f9;
 }
-#intro > div > p > span {
+.intro-header > div > p > span {
   font-size: 19px;
 }
 
@@ -25,15 +33,23 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-#intro > p {
-  font-size: 65px;
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.intro-header > p {
+  font-size: 65px;
+  margin-top: 20px;
+  padding-left: 30px;
   color: white;
-  top: 150px;
-  right: 44vw;
+
   text-align: left;
   line-height: 65px;
+  display: block;
+  position: relative;
+  /* text-shadow: #dfdfdf 0px 0px 13px; */
+  text-shadow: 1px 0 #dfdfdf, 0 1px #dfdfdf, 1px 0 #dfdfdf, 0 1px #dfdfdf;
 }
 #intro > a {
   width: 170px;
@@ -61,27 +77,42 @@
   height: 88px;
   text-decoration: none;
 }
-@media (max-width: 768px) {
-  #intro > div {
+@media (max-width: 767px) {
+  .intro-header {
+    padding-top: 18vh;
+  }
+  .intro-header > div {
     display: flex;
     align-items: center;
-    left: 36px;
-    bottom: 22vh;
+    position: absolute;
+    left: 20px;
+    bottom: 24vh;
+    /* left: 36px;
+    bottom: 25vh;
+    top: auto; */
   }
-  #intro > div > p {
+  .intro-header > div > p {
     font-size: 18px;
+    color: black;
   }
-  #intro > div > p > span {
+  .intro-header > div > p > span {
     font-size: 16px;
   }
-  #intro > div > img {
+  .intro-header > div > img {
     width: 130px;
-    padding-right: 10px;
+    padding-right: 15px;
   }
-  #intro > p {
+  .intro-header > p {
     font-size: 45px;
-    /* text-align: center; */
-    right: auto;
+    line-height: 59px;
+    padding-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  .intro-header {
+    padding-left: 36px !important;
+  }
+  .intro-header > div {
     left: 36px;
   }
 }

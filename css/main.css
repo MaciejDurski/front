@@ -10,16 +10,6 @@ body {
   /*ten kolor można zmieniać zmieni się wtedy akcent (zielony)
     nie zmienia się tylko kolor filtra zdjęcia bo to więcej roboty*/
   --green1: #2fad55;
-  /*
-    --green1:rgb(4, 122, 40);
-    
-    --green1:#0CA83B;
-   
-
-
-    ten kolor był poprzednio
-    --green1:#2FAD55;
-    */
 }
 
 .container-fluid {
@@ -195,6 +185,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-filter: invert(40%) sepia(94%) saturate(379%) hue-rotate(86deg)
+    brightness(90%) contrast(82%) opacity(85%);
 }
 
 .row-margin {
@@ -245,7 +237,7 @@ body {
   width: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .logo-svg {
     margin-left: 20px;
   }
