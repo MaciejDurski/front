@@ -179,14 +179,16 @@ body {
   object-position: center;
   z-index: 1;
   background-image: url("../images/about.jpg");
-  filter: invert(40%) sepia(94%) saturate(379%) hue-rotate(86deg)
-    brightness(90%) contrast(82%) opacity(85%);
+  /* filter: invert(40%) sepia(94%) saturate(379%) hue-rotate(86deg)
+    brightness(90%) contrast(82%) opacity(85%); */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-filter: invert(40%) sepia(94%) saturate(379%) hue-rotate(86deg)
+  /* -webkit-filter: invert(40%) sepia(94%) saturate(379%) hue-rotate(86deg)
     brightness(90%) contrast(82%) opacity(85%);
+  -moz-filter: invert(40%) sepia(94%) saturate(379%) hue-rotate(86deg)
+    brightness(90%) contrast(82%) opacity(85%); */
 }
 
 .row-margin {
@@ -232,15 +234,7 @@ body {
   width: 100%;
 }
 
-.logo-svg {
-  height: 60px;
-  width: auto;
-}
-
 @media (max-width: 767px) {
-  .logo-svg {
-    margin-left: 20px;
-  }
   .about-text {
     font-size: 24px;
   }

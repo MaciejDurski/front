@@ -48,7 +48,18 @@
   bottom: 5%;
   left: 0;
 }
+.logo-svg {
+  height: 80px;
+  width: auto;
+  overflow: visible;
+  background-size:375px 100px ;
+  margin-left: -2px;
+  /* padding: 6px!important; */
+}
 @media (max-width: 767px) {
+  .logo-svg {
+    margin-left: 20px;
+  }
   .navbar-nav {
     margin-top: 27px;
     /* background: rgba(223, 223, 223, 0.5) !important; */
