@@ -118,23 +118,21 @@
   }
 }
 
-@media screen and (orientation: landscape) and (max-width:767px)  {
-  .intro-header{
+@media screen and (orientation: landscape) and (max-width: 767px) {
+  .intro-header {
     padding-top: 29vh;
-
   }
-  
-  .intro-header>div{
+
+  .intro-header > div {
     left: auto;
     right: auto;
     bottom: auto;
-    display: block; 
+    display: block;
     position: relative;
     margin-right: 10vw;
     margin-top: 10px;
-    
   }
-  .intro-header>p{
+  .intro-header > p {
     margin-top: 0;
   }
 }
