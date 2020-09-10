@@ -46,3 +46,24 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 767px) {
+  .green-circle {
+    width: 100px;
+    height: 100px;
+  }
+  .offer-svg {
+    height: 60px;
+    width: 60px;
+  }
+  .offer-label {
+    font-size: 17px;
+    padding-bottom: 4px;
+  }
+}
+
+@media (max-width: 340px) {
+  .offer-label {
+    font-size: 15px;
+  }
+}

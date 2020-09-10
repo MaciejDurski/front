@@ -238,6 +238,9 @@ body {
   .description-caption {
     font-size: 20px;
   }
+  .row-margin {
+    margin: 0px;
+  }
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   #footer {
