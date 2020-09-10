@@ -10,6 +10,7 @@ body {
   /*ten kolor można zmieniać zmieni się wtedy akcent (zielony)
     nie zmienia się tylko kolor filtra zdjęcia bo to więcej roboty*/
   --green1: #2fad55;
+  overflow-x: hidden;
 }
 
 .container-fluid {
@@ -89,35 +90,6 @@ body {
   transform: translateY(-60%);
 }
 
-.upper-caption {
-  font-size: 50px;
-  margin: 10px 0px;
-  line-height: 50px;
-}
-
-.description-caption {
-  font-size: 22px;
-  line-height: 22px;
-  padding-top: 4px;
-}
-
-.caption-btn {
-  background-color: transparent;
-  border: 1px solid #dfdfdf;
-  color: var(--font-color);
-  text-align: center;
-  text-decoration: none;
-  width: 95px;
-  height: 32px;
-  padding: 0px;
-}
-
-.caption-btn:hover {
-  background-color: #dfdfdf;
-  font-weight: 700;
-  color: var(--green1);
-}
-
 .name {
   font-size: 39px;
   font-weight: 500;
@@ -135,11 +107,6 @@ body {
 
 .label-height {
   height: 72px;
-}
-
-.offer-link {
-  color: var(--font-color);
-  text-decoration: none;
 }
 
 .text {
@@ -175,20 +142,8 @@ body {
 
 .offer-img {
   max-height: 50vh;
-  object-fit: cover;
-  object-position: center;
-  /* z-index: 1; */
-  /* background-image: url("../images/about1.png"); */
-  /* filter: invert(40%) sepia(94%) saturate(379%) hue-rotate(86deg)
-    brightness(90%) contrast(82%) opacity(85%); */
-  /* background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-  /* -webkit-filter: invert(40%) sepia(94%) saturate(379%) hue-rotate(86deg)
-    brightness(90%) contrast(82%) opacity(85%);
-  -moz-filter: invert(40%) sepia(94%) saturate(379%) hue-rotate(86deg)
-    brightness(90%) contrast(82%) opacity(85%); */
+  /* object-fit: cover;
+  object-position: center;*/
 }
 
 .row-margin {
@@ -224,6 +179,18 @@ body {
 #staticBtn:hover .arrow-down {
   filter: invert(52%) sepia(59%) saturate(506%) hue-rotate(86deg)
     brightness(94%) contrast(92%);
+}
+.authors {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #dfdfdf;
+  text-align: center;
+  margin: 0;
+  opacity: 0.5;
+  font-size: 14px;
+  padding: 4px 0;
 }
 
 .center-vertical {
@@ -270,5 +237,17 @@ body {
   }
   .description-caption {
     font-size: 20px;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #footer {
+    position: relative;
+    z-index: 2;
+  }
+  body {
+    margin-bottom: 0;
+  }
+  #staticBtn {
+    display: none;
   }
 }
